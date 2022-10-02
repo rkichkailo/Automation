@@ -2,6 +2,7 @@ package com.academy.Ruslana_Kichkailo;
 import java.util.*;
 public class CalculatorDemo {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         boolean showMenu = true;
         while (showMenu) {

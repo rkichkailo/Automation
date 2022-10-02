@@ -9,6 +9,7 @@ public class IncorrectDataCheckTests extends DataProviderForTests{
     public void testIncorrectOperator(String operator){
         assertFalse(DataCheck.checkOperator(operator));
     }
+
     @Test(dataProvider = "numbers_incorrect", expectedExceptions = NumberFormatException.class)
     public void testIncorrectNumber(String number){
         DataCheck.checkNumber(number);

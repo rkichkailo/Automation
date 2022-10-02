@@ -1,5 +1,4 @@
 package com.academy.Ruslana_Kichkailo.Tests;
-
 import com.academy.Ruslana_Kichkailo.DataCheck;
 import org.testng.annotations.Test;
 

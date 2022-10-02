@@ -9,6 +9,7 @@ public class DivisionTests extends DataProviderForTests{
     public void testDivideTwoNumbers(double number1, double number2){
         Assert.assertEquals(Calculator.divide(number1,number2),3);
     }
+
     @Test(expectedExceptions = ArithmeticException.class)
     public void testDivideNumberByZero_exceptionExpected(){
         Calculator.divide(29,0);

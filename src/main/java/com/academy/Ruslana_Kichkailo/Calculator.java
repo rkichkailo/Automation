@@ -2,6 +2,7 @@ package com.academy.Ruslana_Kichkailo;
 
 public class Calculator {
     public static double calculate (double number1, double number2, String operator) {
+
         double result = 0.0;
         try{
             switch (operator) {
@@ -16,18 +17,22 @@ public class Calculator {
         }
         return result;
     }
+
     public static double add(double number1, double number2)throws NumberFormatException{
         return number1 + number2;
     }
+
     public static double subtract(double number1, double number2)throws NumberFormatException{
         return number1 - number2;
     }
+
     public static double multiply(double number1, double number2)throws NumberFormatException{
         return number1 * number2;
     }
+
     public static double divide(double number1, double number2){
         try {
-            if (number2 == 0.0 || number2 ==0){
+            if (number2 == 0.0){
                 throw new java.lang.ArithmeticException("/0");
             }
         }catch (ArithmeticException e){
