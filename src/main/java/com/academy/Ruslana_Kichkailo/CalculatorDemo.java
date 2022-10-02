@@ -1,33 +1,42 @@
 package com.academy.Ruslana_Kichkailo;
-
-import java.math.BigDecimal;
 import java.util.*;
-
 public class CalculatorDemo {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
+        boolean showMenu = true;
+        while (showMenu) {
+            System.out.println("""
+                    ----------------------
+                    Calculator application
+                    ----------------------
+                    Enter 1 to calculate numbers
+                    Enter 2 to close app""");
+            String userChoice = scanner.nextLine();
             try {
-                System.out.println("Enter first number");
-                String value1 = scanner.nextLine();
-                System.out.println("Enter second number");
-                String value2 = scanner.nextLine();
-                System.out.println("Enter on of the operator: + - * /");
-                String operator = scanner.nextLine();
-                try {
-                    Double.parseDouble(value1);
-                    Double.parseDouble(value2);
-                    if (operator.matches("[\\+\\-\\*\\/]")) {
-                        System.out.println(Calculator.calculate(value1, value2, operator));
-                    } else {
-                        System.out.println("Incorrect operator");
+                switch (DataCheck.checkMenuFunctionSelected(userChoice)) {
+                    case 1 -> {
+                        System.out.println("Enter first number");
+                        double number1 = DataCheck.checkNumber(scanner.nextLine());
+                        System.out.println("Enter second number");
+                        double number2 = DataCheck.checkNumber(scanner.nextLine());
+                        System.out.println("Enter math operator");
+                        String operator = scanner.nextLine();
+                        if (DataCheck.checkOperator(operator)) {
+                            System.out.println("Result = " + Calculator.calculate(number1, number2, operator));
+                        } else {
+                            System.out.println("Unacceptable operator provided. Please try again");
+                        }
                     }
-                } catch (NumberFormatException e){
-                    System.out.println("Incorrect value entered");
+                    case 2 -> {
+                        System.out.println("Good Bye!");
+                        showMenu = false;
+                    }
+                    default -> System.out.println("Please try again");
                 }
-            }catch (Exception e){
-                System.out.println("Not accessible value: " + e);
+            } catch (Exception e) {
+                System.out.println("Unacceptable value provided. Please try again");
             }
-
+        }
+        scanner.close();
     }
 }
