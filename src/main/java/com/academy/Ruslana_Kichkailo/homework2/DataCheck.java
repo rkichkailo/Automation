@@ -1,4 +1,4 @@
-package com.academy.Ruslana_Kichkailo;
+package com.academy.Ruslana_Kichkailo.homework2;
 
 public class DataCheck {
     private static final String PATTERN_TO_CHECK_OPERATOR = "[\\+\\-\\*\\/]";

@@ -1,4 +1,4 @@
-package com.academy.Ruslana_Kichkailo.Tests;
+package com.academy.Ruslana_Kichkailo.homework2.tests;
 import org.testng.annotations.DataProvider;
 
 public class DataProviderForTests {

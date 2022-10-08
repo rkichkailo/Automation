@@ -1,4 +1,5 @@
-package com.academy.Ruslana_Kichkailo;
+package com.academy.Ruslana_Kichkailo.homework2;
+
 import java.util.*;
 public class CalculatorDemo {
     public static void main(String[] args) {

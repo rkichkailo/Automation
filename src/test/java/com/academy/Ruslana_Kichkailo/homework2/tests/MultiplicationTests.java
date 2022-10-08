@@ -1,9 +1,9 @@
-package com.academy.Ruslana_Kichkailo.Tests;
-import com.academy.Ruslana_Kichkailo.Calculator;
+package com.academy.Ruslana_Kichkailo.homework2.tests;
+import com.academy.Ruslana_Kichkailo.homework2.Calculator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class MultiplicationTests extends DataProviderForTests{
+public class MultiplicationTests extends DataProviderForTests {
 
     @Test(dataProvider = "numbers_toMultiply")
     public void testMultiplyTwoNumbers(double number1, double number2){

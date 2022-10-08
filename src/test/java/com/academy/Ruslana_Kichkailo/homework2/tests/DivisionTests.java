@@ -1,10 +1,10 @@
-package com.academy.Ruslana_Kichkailo.Tests;
+package com.academy.Ruslana_Kichkailo.homework2.tests;
 
-import com.academy.Ruslana_Kichkailo.Calculator;
+import com.academy.Ruslana_Kichkailo.homework2.Calculator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DivisionTests extends DataProviderForTests{
+public class DivisionTests extends DataProviderForTests {
     @Test(dataProvider = "numbers_toDivide")
     public void testDivideTwoNumbers(double number1, double number2){
         Assert.assertEquals(Calculator.divide(number1,number2),3);

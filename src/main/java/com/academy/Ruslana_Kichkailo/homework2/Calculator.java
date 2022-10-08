@@ -1,4 +1,4 @@
-package com.academy.Ruslana_Kichkailo;
+package com.academy.Ruslana_Kichkailo.homework2;
 
 public class Calculator {
     public static double calculate (double number1, double number2, String operator) {
