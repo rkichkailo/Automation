@@ -13,7 +13,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-
 public class App {
     private static final String JDBC_DRIVER_PATH = "org.sqlite.JDBC";
     private static final String DATABASE_URL = "jdbc:sqlite:src\\main\\resources\\dataBase.db";
@@ -44,6 +43,7 @@ public class App {
                     case "2" -> printAllAccounts(connection, user);
                     case "3" -> showAccountMenu(connection, scanner, user);
                     case "4" -> showGoodByeMessage();
+                    default ->  System.out.println("No option selected");
                 }
             }
             scanner.close();

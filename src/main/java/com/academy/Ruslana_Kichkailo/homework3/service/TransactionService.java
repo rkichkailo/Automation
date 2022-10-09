@@ -10,7 +10,7 @@ import static com.academy.Ruslana_Kichkailo.homework3.query_executor.DBAccountQu
 import static com.academy.Ruslana_Kichkailo.homework3.query_executor.DBTransactionQueryExecutor.*;
 
 public class TransactionService {
-    private static final int MAX_TRANSACTION_AMOUNT = 1_000_000_000;
+    private static final int MAX_TRANSACTION_AMOUNT = 100_000_000;
     private static final int MAX_BALANCE = 2_000_000_000;
     private static final int MIN_BALANCE = 0;
 
