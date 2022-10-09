@@ -13,6 +13,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <test.suit.path>${pom.basedir}/src/test/resources/testng.xml</test.suit.path>
+        <db.path>${project.basedir}/src/main/resources/dataBase.db</db.path>
     </properties>
     <build>
         <plugins>
@@ -22,6 +23,9 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <suiteXmlFiles>${test.suite.path}</suiteXmlFiles>
+                    <systemPropertyVariables>
+                        <mydb_path>${db.path}</mydb_path>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
             <plugin>
@@ -70,7 +74,7 @@
         <dependency>
             <groupId>org.xerial</groupId>
             <artifactId>sqlite-jdbc</artifactId>
-            <version>3.36.0.3</version>
+            <version>3.39.3.0</version>
         </dependency>
     </dependencies>
 
