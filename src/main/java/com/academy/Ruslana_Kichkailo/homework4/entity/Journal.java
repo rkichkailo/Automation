@@ -8,24 +8,12 @@ public class Journal {
     private Contacts contacts;
     private List<Article> articles;
 
-    public String getTitle() {
-        return title;
-    }
-
     public void setTitle(String title) {
         this.title = title;
     }
 
-    public Contacts getContacts() {
-        return contacts;
-    }
-
     public void setContacts(Contacts contacts) {
         this.contacts = contacts;
-    }
-
-    public List<Article> getArticles() {
-        return articles;
     }
 
     public void setArticles(List<Article> articles) {
