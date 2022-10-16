@@ -1,12 +1,11 @@
 package com.academy.Ruslana_Kichkailo.homework4.entity;
 
 import java.util.List;
-import java.util.Objects;
 
 public class Journal {
 
     private String title;
-    private List<String> contacts;
+    private Contacts contacts;
     private List<Article> articles;
 
     public String getTitle() {
@@ -17,11 +16,11 @@ public class Journal {
         this.title = title;
     }
 
-    public List<String> getContacts() {
+    public Contacts getContacts() {
         return contacts;
     }
 
-    public void setContacts(List<String> contacts) {
+    public void setContacts(Contacts contacts) {
         this.contacts = contacts;
     }
 
@@ -31,19 +30,6 @@ public class Journal {
 
     public void setArticles(List<Article> articles) {
         this.articles = articles;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Journal journal = (Journal) o;
-        return Objects.equals(title, journal.title) && Objects.equals(contacts, journal.contacts) && Objects.equals(articles, journal.articles);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(title, contacts, articles);
     }
 
     @Override
